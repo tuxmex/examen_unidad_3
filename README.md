@@ -931,108 +931,111 @@ Al interpretar los datos analíticos de retención que muestran que los usuarios
 * C) Porque las métricas de retención solo aplican para aplicaciones de juegos.
 * D) Porque el monedero digital no almacena el historial de transacciones.
 
-Clave de Respuestas y Explicaciones Detalladas
+# Clave de Respuestas y Explicaciones Detalladas
 
-Pregunta	Respuesta	Justificación Técnica Fundada en los Manuales
-1	B	FutureBuilder escucha el estado del Future y reconstruye la UI según ConnectionState (Reto 1 Películas & Reto 4 Cripto).
-2	B	Evita pantallas vacías informando el estado de carga durante peticiones asíncronas (Reto 3 Clima).
-3	A	Uri.encodeComponent escapa caracteres no válidos en URLs dinámicas (Reto 2 Gatos & Manual Wikipedia).
-4	C	HTTP 429 indica saturación de cuota o límite de peticiones (Manual 5 APIs / ClienteSeguro).
-5	B	El paquete http no lanza excepción en códigos 404/500; retorna Response con dicho statusCode (Manual Consumo API Local).
-6	B	utf8.encode() garantiza que caracteres multibyte (acentos, ñ) no se corrompan en pruebas (Manual 5 APIs).
-7	B	itemCount establece el número de elementos a construir dinámicamente en ListView.builder (Reto 4).
-8	B	setState() notifica al framework para ejecutar de nuevo build() con los nuevos datos (Retos 2 y 4).
-9	C	double.tryParse() devuelve null si el texto no es un decimal válido, evitando excepciones no controladas (Reto 4).
-10	B	La cabecera Accept especifica que el cliente espera una respuesta formateada en JSON (Manual 5 APIs).
-11	B	El ciclo TDD inmutable es Rojo (prueba que falla), Verde (código mínimo) y Refactor (limpieza) (Manual Ajolotito / Todos).
-12	A	Desacoplar el dominio de Flutter permite ejecutar cientos de pruebas unitarias en milisegundos en la máquina virtual de Dart (Todos los manuales).
-13	B	Una prueba que falla confirma que el test verifica activamente la ausencia de la característica requerida (Todos los manuales).
-14	B	En la fase Verde se debe escribir únicamente el código mínimo para pasar la prueba, evitando sobre-ingeniería (Todos).
-15	B	Refactor permite mejorar la calidad y nombres del código sin modificar el comportamiento ni romper pruebas (Todos).
-16	B	Calcular resultados esperados de forma independiente (ej. con Python o a mano) evita caer en sesgos al probar matemática (Manuales Ajolotito, Habla Fluido).
-17	B	expect(actual, matcher) es la función estándar de aserción en flutter_test (Todos).
-18	B	Las pruebas de regresión aseguran que nuevas adiciones no destruyan características que ya funcionaban (Todos).
-19	B	closeTo() verifica que un valor flotante esté dentro de una tolerancia aceptable respecto al valor objetivo (Manuales Ajolotito, Habla Fluido, Geodesia).
-20	B	Modificar la prueba para validar un error invalida la red de seguridad del TDD (Todos).
-21	B	Una clase abstracta en el dominio actúa como contrato (Puerto), independizándolo de la infraestructura (Manual Ajolotito, Lotería, Dolores AR).
-22	B	Inyectar dependencias por constructor permite sustituir servicios reales por dobles de prueba deterministas (Todos).
-23	B	Abstraer el tiempo mediante una interfaz Reloj permite simular el avance de horas instantáneamente en las pruebas (RelojFalso) (Manual Ajolotito).
-24	B	Un doble Falso implementa el puerto guardando estado en memoria sin tocar plugins ni APIs (Manuales Ajolotito, Lotería, Rally).
-25	B	El Composition Root (main.dart / dependencias.dart) instanciar y ensambla todas las dependencias reales (Manuales 5 APIs, Punto de Venta, Tienda Talavera).
-26	B	Limitar el contexto a un ContextoMiniApp aplica el principio de menor privilegio sobre permisos y servicios (Manual SuperApp).
-27	A	MockClient intercepta peticiones HTTP para simular respuestas (200, 500, timeouts) instantáneamente sin red (Manuales Consumo API Local, 5 APIs).
-28	A	Reutilizar la lógica de movimiento horizontal invirtiendo o transponiendo matrices evita duplicar código algorítmico (DRY) (Manual Nieves 2048).
-29	B	El patrón Puerto/Adaptador confina los cambios de paquetes o plugins a la clase adaptadora de infraestructura (Manuales Ajolotito, Lotería).
-30	B	Un dominio puro se compone exclusivamente de código Dart sin dependencias de Flutter ni de plugins (Todos los manuales).
-31	B	El ViewModel expone el estado de UI, gestiona acciones del usuario y notifica cambios a la vista mediante notifyListeners() (Todos los manuales).
-32	B	Representar explícitamente inicial, cargando, listo, vacio y error cubre todos los estados de la experiencia de usuario (Manual Consumo API Local).
-33	A	ListenableBuilder / AnimatedBuilder escucha un ChangeNotifier y reconstruye su sub-árbol al recibir notificaciones (Manuales Ajolotito, Punto de Venta).
-34	B	Debounce retrasa la ejecución hasta que el usuario deja de teclear por un intervalo determinado, evitando saturación (Manual Consumo API Local).
-35	B	Sin notifyListeners(), el estado interno cambia pero la interfaz no se enterará ni se redibujará (Todos los manuales).
-36	A	Instanciar el ViewModel en initState() o inyectarlo preserva el objeto a través de reconstrucciones de widgets (Todos los manuales).
-37	B	El ViewModel captura las excepciones de dominio y actualiza un campo de mensaje seguro para que la UI lo despliegue (Todos los manuales).
-38	B	Manejar un objeto Carga<T> independiente por servicio permite que fallas en una API no afecten a las demás (Manual 5 APIs).
-39	C	El método dispose() de un State es el lugar adecuado para cancelar suscripciones y liberar controladores (Todos los manuales).
-40	B	Escuchar los cambios agregando un listener previo a la llamada registra las transiciones de estado para su validación (Manuales 5 APIs, Consumo API Local).
-41	B	El almacenamiento binario de double produce impresiciones flotantes que provocan desbalances en los cortes financieros (Manual Punto de Venta).
-42	B	Representar el dinero en enteros de centavos elimina el riesgo de errores de coma flotante (Manuales Punto de Venta, Tienda Talavera, SuperApp).
-43	B	inMemoryDatabasePath de sqflite_common_ffi crea bases de datos SQLite volátiles en RAM para pruebas rápidas (Manual Punto de Venta).
-44	B	Las transacciones db.transaction garantizan la atomicidad (se ejecuta todo o se revierte todo) de la venta e inventario (Manual Punto de Venta).
-45	B	aMapa() y desdeMapa() adaptan las instancias tipadas de Dart a los mapas estructurados que requiere SQLite (Manual Punto de Venta).
-46	B	El repositorio captura la excepción técnica de la BD y la traduce a una excepción de negocio comprensible (CodigoDuplicadoException) (Manual Punto de Venta).
-47	C	Para obtener el IVA (16%) incluido en un total T, el desglose exacto en enteros es T - (T * 100 ~/ 116) (Manual Punto de Venta).
-48	B	Revalidar existencias dentro de la transacción atómica evita vender productos que fueron tomados por otra venta simultánea (Manual Punto de Venta).
-49	B	COALESCE(SUM(...), 0) asegura que la consulta SQL retorne 0 en centavos cuando la tabla de ventas esté vacía (Manual Punto de Venta).
-50	B	Abstraer SQLite mediante el repositorio permite cambiar el motor de persistencia o probarlo con dobles sin tocar la UI ni el dominio (Manual Punto de Venta).
-51	B	Las notificaciones locales son internas del dispositivo; las push son enviadas desde un servidor externo a través de la nube (Manuales Ajolotito, Lotería Push).
-52	B	Se debe pedir permiso previa explicación y evitar notificar en horas de silencio (ej. 22:00 a 08:00) salvo urgencia (Manual Ajolotito).
-53	B	Android 13 (API 33) convirtió el permiso de notificaciones en un permiso runtime explícito (POST_NOTIFICATIONS) (Manuales Ajolotito, Lotería Push).
-54	B	El push puede perderse o desordenarse; la app debe usarlo como aviso y consultar al servidor para obtener el estado verdadero (Manual Lotería Push).
-55	A	El protocolo de transporte de FCM exige que los valores del mapa data sean exclusivamente cadenas de texto (Manual Lotería Push).
-56	B	FCM expone onMessage (primer plano), onMessageOpenedApp (segundo plano tocado) y getInitialMessage / onBackgroundMessage (cerrada/fondo) (Manual Lotería Push).
-57	B	El manejador de fondo debe ser una función top-level anotada con @pragma('vm:entry-point') ejecutada en un isolate independiente (Manual Lotería Push).
-58	B	El payload es el dato interno en el mensaje que indica a la app la acción o pantalla hacia donde debe navegar al tocar la notificación (Manuales Ajolotito, Lotería Push).
-59	B	Los canales de Android organizan las notificaciones por categorías para que el usuario controle su nivel de importancia e interrupción (Manuales Ajolotito, Lotería Push).
-60	B	El uso del objeto de valor DestinoPush encapsula los detalles de Tokens FCM o FIDs, protegiendo al dominio de cambios en la infraestructura (Manual Lotería Push).
-61	B	Las cadenas almacenadas dentro del código compilado de la app son fácilmente extraíbles mediante ingeniería inversa o descompilación del APK (Manuales 5 APIs, Habla Fluido).
-62	B	--dart-define inyecta valores al compilar que se leen en tiempo de ejecución mediante String.fromEnvironment() (Manuales 5 APIs, Habla Fluido).
-63	B	Un servidor Proxy intermediario custodia la llave de API real y autentica las peticiones del cliente (Manuales 5 APIs, Habla Fluido).
-64	B	ClienteSeguro.redactar reemplaza valores de llaves o tokens en la URL por *** antes de imprimir logs (Manual 5 APIs).
-65	B	mensajeSeguro() filtra detalles técnicos en excepciones no controladas y sólo expone mensajes seguros para el usuario (Manuales 5 APIs, Habla Fluido, SuperApp).
-66	B	soloHttps() valida que los recursos de red externos utilicen protocolos seguros cifrados https:// (Manuales 5 APIs, Tienda Talavera).
-67	B	Limitar los bytes máximos previene desbordamientos de memoria local si un servidor responde con payloads maliciosos o masivos (Manual 5 APIs).
-68	B	flutter_secure_storage almacena secretos cifrados en el Keystore/Keychain del SO (Manual Tienda Talavera).
-69	B	El algoritmo de Luhn detecta errores sintácticos en el número de tarjeta en el cliente sin requerir llamadas a la pasarela (Manual Tienda Talavera).
-70	B	La clave de idempotencia garantiza que la pasarela no procese un cobro dos veces ante reintentos por pérdidas de red (Manual Tienda Talavera).
-71	B	La fórmula de Haversine calcula la distancia ortodrómica sobre la esfericidad terrestre entre dos coordenadas (Manuales Rally AR, Dolores AR).
-72	B	El azimut es el ángulo en grados (0° a 360°) respecto al Norte hacia donde yace la coordenada de destino (Manuales Rally AR, Dolores AR).
-73	B	El problema directo de la geodesia calcula las nuevas coordenadas (latitud, longitud) al avanzar una distancia en un rumbo dado (Manual Rally AR).
-74	B	La posición x en pantalla se obtiene proyectando la diferencia angular entre la vista del usuario y el objetivo dentro del rango del FOV (Manuales Rally AR, Dolores AR).
-75	B	La diferencia angular debe calcular la trayectoria más corta considerando la discontinuidad circular entre 360° y 0° (Manuales Rally AR, Dolores AR).
-76	B	Promediar de forma simple valores cercanos a 360° y 0° genera una media cercana a 180°, provocando saltos bruscos en la UI (Manuales Rally AR, Dolores AR).
-77	B	suavizarAngulo calcula el delta corto con diferenciaAngular y aplica el factor de suavizado (lpha) manteniendo la continuidad (Manuales Rally AR, Dolores AR).
-78	B	CustomPainter provee un lienzo 2D para renderizar primitivas matemáticas arbitrarias como radares polares (Manual Rally AR).
-79	B	.glb/.gltf es el estándar para Android (Scene Viewer) y .usdz para iOS (Quick Look) en AR basada en modelos 3D (Manuales Dolores AR, Tienda Talavera).
-80	A	El Modo Demo simula sensores (GPS/Brújula) permitiendo ejecutar y evaluar las mecánicas en entornos estáticos o de desarrollo (Manuales Rally AR, Dolores AR).
-81	B	Al deslizar [2, 2, 2, null], los dos primeros 2 se fusionan en 4 y el tercero ocupa el siguiente espacio disponible: [4, 2, null, null] (Manual Nieves 2048).
-82	A	Las reglas de 2048 impiden que un elemento recién fusionado participe en una segunda fusión durante el mismo movimiento (Manual Nieves 2048).
-83	B	Transponer la matriz o invertir filas permite reusar el algoritmo de desplazamiento a la izquierda para todas las direcciones (Manual Nieves 2048).
-84	B	El motor compara la matriz antes y después del movimiento y sólo genera una nueva ficha si hubo desplazamientos reales (Manual Nieves 2048).
-85	B	La distancia de Levenshtein contabiliza las ediciones mínimas (inserción, borrado, sustitución) para evaluar la similitud fonética/textual (Manual Habla Fluido).
-86	B	normalizar() homogeniza el texto pasando a minúsculas, quitando puntuación pero conservando apóstrofos en contracciones (Manual Habla Fluido).
-87	B	Un fallo en SM-2 (calidad < 3) reinicia las repeticiones consecutivas a 0 y restablece el intervalo a 1 día (Manual Habla Fluido).
-88	B	El algoritmo SM-2 establece un piso mínimo de 1.3 para el factor de facilidad, evitando tarjetas atascadas en bucles de revisión infinita (Manual Habla Fluido).
-89	A	El Promedio Móvil Exponencial (EMA) pondera más las ejecuciones recientes permitiendo reflejar el avance sin descartar el historial (Manual Habla Fluido).
-90	B	cerrarRondaYAvanzar() requiere que todos los participantes registrados hayan entregado su aportación en la ronda corriente (Manual Tanda Doloreña).
-91	B	Una SuperApp integra múltiples servicios interconectados bajo una única identidad y un monedero digital unificado (Manual SuperApp).
-92	B	El BusEventos permite la comunicación asíncrona desacoplada entre módulos independientes mediante el patrón Publicar/Suscribir (Manual SuperApp).
-93	B	El bus captura las excepciones de suscriptores individuales para evitar que un fallo en un módulo afecte a los demás (Manual SuperApp).
-94	B	El "Kill Switch" permite desactivar o habilitar mini-apps dinámicamente desde el registro central sin redesplegar la app (Manual SuperApp).
-95	B	El motor de lealtad verifica si el ID de un evento ya fue procesado antes de otorgar puntos para garantizar idempotencia (Manual SuperApp).
-96	B	Usar 3 o más servicios distintos en una misma semana otorga un bono de variedad de puntos una sola vez por escalón semanal (Manual SuperApp).
-97	B	El Notificador aplica cuotas máximas diarias de notificaciones promocionales por usuario para evitar saturación y spam (Manual SuperApp).
-98	B	El algoritmo de sugerencias prioriza servicios no probados por el usuario según el momento del día para estimular el descubrimiento (Manual SuperApp).
-99	B	DAU contabiliza los usuarios únicos que interactuaron activamente con valor en la plataforma durante un periodo de 24 horas (Manual SuperApp).
-100	B	Correlación no implica causalidad; los usuarios con mayor compromiso usan más servicios de forma natural (sesgo de selección) (Manual SuperApp).
+| # | Resp. | Justificación técnica (fundada en los manuales) |
+|---:|:---:|---|
+| 1 | B | `FutureBuilder` escucha el estado del `Future` y reconstruye la UI según `ConnectionState` (Reto 1 Películas & Reto 4 Cripto). |
+| 2 | B | Evita pantallas vacías informando el estado de carga durante peticiones asíncronas (Reto 3 Clima). |
+| 3 | A | `Uri.encodeComponent` escapa caracteres no válidos en URLs dinámicas (Reto 2 Gatos & Manual Wikipedia). |
+| 4 | C | HTTP `429` indica saturación de cuota o límite de peticiones (Manual 5 APIs / `ClienteSeguro`). |
+| 5 | B | El paquete `http` no lanza excepción en códigos `404/500`; retorna `Response` con dicho `statusCode` (Manual Consumo API Local). |
+| 6 | B | `utf8.encode()` garantiza que caracteres multibyte (acentos, ñ) no se corrompan en pruebas (Manual 5 APIs). |
+| 7 | B | `itemCount` establece el número de elementos a construir dinámicamente en `ListView.builder` (Reto 4). |
+| 8 | B | `setState()` notifica al framework para ejecutar de nuevo `build()` con los nuevos datos (Retos 2 y 4). |
+| 9 | C | `double.tryParse()` devuelve `null` si el texto no es un decimal válido, evitando excepciones no controladas (Reto 4). |
+| 10 | B | La cabecera `Accept` especifica que el cliente espera una respuesta formateada en JSON (Manual 5 APIs). |
+| 11 | B | El ciclo TDD inmutable es Rojo (prueba que falla), Verde (código mínimo) y Refactor (limpieza) (Manual Ajolotito / Todos). |
+| 12 | A | Desacoplar el dominio de Flutter permite ejecutar cientos de pruebas unitarias en milisegundos en la máquina virtual de Dart (Todos los manuales). |
+| 13 | B | Una prueba que falla confirma que el test verifica activamente la ausencia de la característica requerida (Todos los manuales). |
+| 14 | B | En la fase Verde se debe escribir únicamente el código mínimo para pasar la prueba, evitando sobre-ingeniería (Todos). |
+| 15 | B | Refactor permite mejorar la calidad y nombres del código sin modificar el comportamiento ni romper pruebas (Todos). |
+| 16 | B | Calcular resultados esperados de forma independiente (ej. con Python o a mano) evita caer en sesgos al probar matemática (Manuales Ajolotito, Habla Fluido). |
+| 17 | B | `expect(actual, matcher)` es la función estándar de aserción en `flutter_test` (Todos). |
+| 18 | B | Las pruebas de regresión aseguran que nuevas adiciones no destruyan características que ya funcionaban (Todos). |
+| 19 | B | `closeTo()` verifica que un valor flotante esté dentro de una tolerancia aceptable respecto al valor objetivo (Manuales Ajolotito, Habla Fluido, Geodesia). |
+| 20 | B | Modificar la prueba para validar un error invalida la red de seguridad del TDD (Todos). |
+| 21 | B | Una clase abstracta en el dominio actúa como contrato (Puerto), independizándolo de la infraestructura (Manual Ajolotito, Lotería, Dolores AR). |
+| 22 | B | Inyectar dependencias por constructor permite sustituir servicios reales por dobles de prueba deterministas (Todos). |
+| 23 | B | Abstraer el tiempo mediante una interfaz `Reloj` permite simular el avance de horas instantáneamente en las pruebas (`RelojFalso`) (Manual Ajolotito). |
+| 24 | B | Un doble Falso implementa el puerto guardando estado en memoria sin tocar plugins ni APIs (Manuales Ajolotito, Lotería, Rally). |
+| 25 | B | El Composition Root (`main.dart` / `dependencias.dart`) instancia y ensambla todas las dependencias reales (Manuales 5 APIs, Punto de Venta, Tienda Talavera). |
+| 26 | B | Limitar el contexto a un `ContextoMiniApp` aplica el principio de menor privilegio sobre permisos y servicios (Manual SuperApp). |
+| 27 | A | `MockClient` intercepta peticiones HTTP para simular respuestas (200, 500, timeouts) instantáneamente sin red (Manuales Consumo API Local, 5 APIs). |
+| 28 | A | Reutilizar la lógica de movimiento horizontal invirtiendo o transponiendo matrices evita duplicar código algorítmico (DRY) (Manual Nieves 2048). |
+| 29 | B | El patrón Puerto/Adaptador confina los cambios de paquetes o plugins a la clase adaptadora de infraestructura (Manuales Ajolotito, Lotería). |
+| 30 | B | Un dominio puro se compone exclusivamente de código Dart sin dependencias de Flutter ni de plugins (Todos los manuales). |
+| 31 | B | El ViewModel expone el estado de UI, gestiona acciones del usuario y notifica cambios a la vista mediante `notifyListeners()` (Todos los manuales). |
+| 32 | B | Representar explícitamente inicial, cargando, listo, vacío y error cubre todos los estados de la experiencia de usuario (Manual Consumo API Local). |
+| 33 | A | `ListenableBuilder` / `AnimatedBuilder` escucha un `ChangeNotifier` y reconstruye su sub-árbol al recibir notificaciones (Manuales Ajolotito, Punto de Venta). |
+| 34 | B | Debounce retrasa la ejecución hasta que el usuario deja de teclear por un intervalo determinado, evitando saturación (Manual Consumo API Local). |
+| 35 | B | Sin `notifyListeners()`, el estado interno cambia pero la interfaz no se enterará ni se redibujará (Todos los manuales). |
+| 36 | A | Instanciar el ViewModel en `initState()` o inyectarlo preserva el objeto a través de reconstrucciones de widgets (Todos los manuales). |
+| 37 | B | El ViewModel captura las excepciones de dominio y actualiza un campo de mensaje seguro para que la UI lo despliegue (Todos los manuales). |
+| 38 | B | Manejar un objeto `Carga<T>` independiente por servicio permite que fallas en una API no afecten a las demás (Manual 5 APIs). |
+| 39 | C | El método `dispose()` de un `State` es el lugar adecuado para cancelar suscripciones y liberar controladores (Todos los manuales). |
+| 40 | B | Escuchar los cambios agregando un listener previo a la llamada registra las transiciones de estado para su validación (Manuales 5 APIs, Consumo API Local). |
+| 41 | B | El almacenamiento binario de `double` produce imprecisiones flotantes que provocan desbalances en los cortes financieros (Manual Punto de Venta). |
+| 42 | B | Representar el dinero en enteros de centavos elimina el riesgo de errores de coma flotante (Manuales Punto de Venta, Tienda Talavera, SuperApp). |
+| 43 | B | `inMemoryDatabasePath` de `sqflite_common_ffi` crea bases de datos SQLite volátiles en RAM para pruebas rápidas (Manual Punto de Venta). |
+| 44 | B | Las transacciones `db.transaction` garantizan la atomicidad (se ejecuta todo o se revierte todo) de la venta e inventario (Manual Punto de Venta). |
+| 45 | B | `aMapa()` y `desdeMapa()` adaptan las instancias tipadas de Dart a los mapas estructurados que requiere SQLite (Manual Punto de Venta). |
+| 46 | B | El repositorio captura la excepción técnica de la BD y la traduce a una excepción de negocio comprensible (`CodigoDuplicadoException`) (Manual Punto de Venta). |
+| 47 | C | Para obtener el IVA (16 %) incluido en un total `T`, el desglose exacto en enteros es `T - (T * 100 ~/ 116)` (Manual Punto de Venta). |
+| 48 | B | Revalidar existencias dentro de la transacción atómica evita vender productos que fueron tomados por otra venta simultánea (Manual Punto de Venta). |
+| 49 | B | `COALESCE(SUM(...), 0)` asegura que la consulta SQL retorne 0 en centavos cuando la tabla de ventas esté vacía (Manual Punto de Venta). |
+| 50 | B | Abstraer SQLite mediante el repositorio permite cambiar el motor de persistencia o probarlo con dobles sin tocar la UI ni el dominio (Manual Punto de Venta). |
+| 51 | B | Las notificaciones locales son internas del dispositivo; las push son enviadas desde un servidor externo a través de la nube (Manuales Ajolotito, Lotería Push). |
+| 52 | B | Se debe pedir permiso previa explicación y evitar notificar en horas de silencio (ej. 22:00 a 08:00) salvo urgencia (Manual Ajolotito). |
+| 53 | B | Android 13 (API 33) convirtió el permiso de notificaciones en un permiso runtime explícito (`POST_NOTIFICATIONS`) (Manuales Ajolotito, Lotería Push). |
+| 54 | B | El push puede perderse o desordenarse; la app debe usarlo como aviso y consultar al servidor para obtener el estado verdadero (Manual Lotería Push). |
+| 55 | A | El protocolo de transporte de FCM exige que los valores del mapa `data` sean exclusivamente cadenas de texto (Manual Lotería Push). |
+| 56 | B | FCM expone `onMessage` (primer plano), `onMessageOpenedApp` (segundo plano tocado) y `getInitialMessage` / `onBackgroundMessage` (cerrada/fondo) (Manual Lotería Push). |
+| 57 | B | El manejador de fondo debe ser una función top-level anotada con `@pragma('vm:entry-point')` ejecutada en un isolate independiente (Manual Lotería Push). |
+| 58 | B | El payload es el dato interno en el mensaje que indica a la app la acción o pantalla hacia donde debe navegar al tocar la notificación (Manuales Ajolotito, Lotería Push). |
+| 59 | B | Los canales de Android organizan las notificaciones por categorías para que el usuario controle su nivel de importancia e interrupción (Manuales Ajolotito, Lotería Push). |
+| 60 | B | El uso del objeto de valor `DestinoPush` encapsula los detalles de Tokens FCM o FIDs, protegiendo al dominio de cambios en la infraestructura (Manual Lotería Push). |
+| 61 | B | Las cadenas almacenadas dentro del código compilado de la app son fácilmente extraíbles mediante ingeniería inversa o descompilación del APK (Manuales 5 APIs, Habla Fluido). |
+| 62 | B | `--dart-define` inyecta valores al compilar que se leen en tiempo de ejecución mediante `String.fromEnvironment()` (Manuales 5 APIs, Habla Fluido). |
+| 63 | B | Un servidor Proxy intermediario custodia la llave de API real y autentica las peticiones del cliente (Manuales 5 APIs, Habla Fluido). |
+| 64 | B | `ClienteSeguro.redactar` reemplaza valores de llaves o tokens en la URL por `***` antes de imprimir logs (Manual 5 APIs). |
+| 65 | B | `mensajeSeguro()` filtra detalles técnicos en excepciones no controladas y sólo expone mensajes seguros para el usuario (Manuales 5 APIs, Habla Fluido, SuperApp). |
+| 66 | B | `soloHttps()` valida que los recursos de red externos utilicen protocolos seguros cifrados `https://` (Manuales 5 APIs, Tienda Talavera). |
+| 67 | B | Limitar los bytes máximos previene desbordamientos de memoria local si un servidor responde con payloads maliciosos o masivos (Manual 5 APIs). |
+| 68 | B | `flutter_secure_storage` almacena secretos cifrados en el Keystore/Keychain del SO (Manual Tienda Talavera). |
+| 69 | B | El algoritmo de Luhn detecta errores sintácticos en el número de tarjeta en el cliente sin requerir llamadas a la pasarela (Manual Tienda Talavera). |
+| 70 | B | La clave de idempotencia garantiza que la pasarela no procese un cobro dos veces ante reintentos por pérdidas de red (Manual Tienda Talavera). |
+| 71 | B | La fórmula de Haversine calcula la distancia ortodrómica sobre la esfericidad terrestre entre dos coordenadas (Manuales Rally AR, Dolores AR). |
+| 72 | B | El azimut es el ángulo en grados (0° a 360°) respecto al Norte hacia donde yace la coordenada de destino (Manuales Rally AR, Dolores AR). |
+| 73 | B | El problema directo de la geodesia calcula las nuevas coordenadas (latitud, longitud) al avanzar una distancia en un rumbo dado (Manual Rally AR). |
+| 74 | B | La posición `x` en pantalla se obtiene proyectando la diferencia angular entre la vista del usuario y el objetivo dentro del rango del FOV (Manuales Rally AR, Dolores AR). |
+| 75 | B | La diferencia angular debe calcular la trayectoria más corta considerando la discontinuidad circular entre 360° y 0° (Manuales Rally AR, Dolores AR). |
+| 76 | B | Promediar de forma simple valores cercanos a 360° y 0° genera una media cercana a 180°, provocando saltos bruscos en la UI (Manuales Rally AR, Dolores AR). |
+| 77 | B | `suavizarAngulo` calcula el delta corto con `diferenciaAngular` y aplica el factor de suavizado (`alpha`) manteniendo la continuidad (Manuales Rally AR, Dolores AR). |
+| 78 | B | `CustomPainter` provee un lienzo 2D para renderizar primitivas matemáticas arbitrarias como radares polares (Manual Rally AR). |
+| 79 | B | `.glb`/`.gltf` es el estándar para Android (Scene Viewer) y `.usdz` para iOS (Quick Look) en AR basada en modelos 3D (Manuales Dolores AR, Tienda Talavera). |
+| 80 | A | El Modo Demo simula sensores (GPS/Brújula) permitiendo ejecutar y evaluar las mecánicas en entornos estáticos o de desarrollo (Manuales Rally AR, Dolores AR). |
+| 81 | B | Al deslizar `[2, 2, 2, null]`, los dos primeros `2` se fusionan en `4` y el tercero ocupa el siguiente espacio disponible: `[4, 2, null, null]` (Manual Nieves 2048). |
+| 82 | A | Las reglas de 2048 impiden que un elemento recién fusionado participe en una segunda fusión durante el mismo movimiento (Manual Nieves 2048). |
+| 83 | B | Transponer la matriz o invertir filas permite reusar el algoritmo de desplazamiento a la izquierda para todas las direcciones (Manual Nieves 2048). |
+| 84 | B | El motor compara la matriz antes y después del movimiento y sólo genera una nueva ficha si hubo desplazamientos reales (Manual Nieves 2048). |
+| 85 | B | La distancia de Levenshtein contabiliza las ediciones mínimas (inserción, borrado, sustitución) para evaluar la similitud fonética/textual (Manual Habla Fluido). |
+| 86 | B | `normalizar()` homogeniza el texto pasando a minúsculas, quitando puntuación pero conservando apóstrofos en contracciones (Manual Habla Fluido). |
+| 87 | B | Un fallo en SM-2 (calidad < 3) reinicia las repeticiones consecutivas a 0 y restablece el intervalo a 1 día (Manual Habla Fluido). |
+| 88 | B | El algoritmo SM-2 establece un piso mínimo de 1.3 para el factor de facilidad, evitando tarjetas atascadas en bucles de revisión infinita (Manual Habla Fluido). |
+| 89 | A | El Promedio Móvil Exponencial (EMA) pondera más las ejecuciones recientes permitiendo reflejar el avance sin descartar el historial (Manual Habla Fluido). |
+| 90 | B | `cerrarRondaYAvanzar()` requiere que todos los participantes registrados hayan entregado su aportación en la ronda corriente (Manual Tanda Doloreña). |
+| 91 | B | Una SuperApp integra múltiples servicios interconectados bajo una única identidad y un monedero digital unificado (Manual SuperApp). |
+| 92 | B | El `BusEventos` permite la comunicación asíncrona desacoplada entre módulos independientes mediante el patrón Publicar/Suscribir (Manual SuperApp). |
+| 93 | B | El bus captura las excepciones de suscriptores individuales para evitar que un fallo en un módulo afecte a los demás (Manual SuperApp). |
+| 94 | B | El "Kill Switch" permite desactivar o habilitar mini-apps dinámicamente desde el registro central sin redesplegar la app (Manual SuperApp). |
+| 95 | B | El motor de lealtad verifica si el ID de un evento ya fue procesado antes de otorgar puntos para garantizar idempotencia (Manual SuperApp). |
+| 96 | B | Usar 3 o más servicios distintos en una misma semana otorga un bono de variedad de puntos una sola vez por escalón semanal (Manual SuperApp). |
+| 97 | B | El `Notificador` aplica cuotas máximas diarias de notificaciones promocionales por usuario para evitar saturación y spam (Manual SuperApp). |
+| 98 | B | El algoritmo de sugerencias prioriza servicios no probados por el usuario según el momento del día para estimular el descubrimiento (Manual SuperApp). |
+| 99 | B | DAU contabiliza los usuarios únicos que interactuaron activamente con valor en la plataforma durante un periodo de 24 horas (Manual SuperApp). |
+| 100 | B | Correlación no implica causalidad; los usuarios con mayor compromiso usan más servicios de forma natural (sesgo de selección) (Manual SuperApp). |
+
+> Nota: en la fila **77** el original traía `lpha` (carácter de control); se transcribió como `alpha`.
 
 Banco de 100 Preguntas de Evaluación elaborado a partir de los Manuales de Desarrollo Móvil Integral con Flutter y TDD.
