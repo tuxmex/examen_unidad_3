@@ -1,8 +1,8 @@
-Banco de 100 Preguntas de Evaluación: Programación de Dispositivos Móviles con Flutter y TDD
+# Banco de 100 Preguntas de Evaluación: Programación de Dispositivos Móviles con Flutter y TDD
 
 Este banco de evaluación ha sido diseñado para medir el dominio teórico y práctico de los alumnos en el desarrollo de aplicaciones móviles con Flutter, guiado por la metodología de Desarrollo Guiado por Pruebas (TDD) y principios de Arquitectura Limpia. La estructura abarca desde los fundamentos de interfaz y consumo de servicios hasta algoritmos avanzados de realidad aumentada, sincronización distribuida, persistencia relacional y arquitectura de ecosistemas digitales.
 
-Guía Didáctica y Criterios de Evaluación
+## Guía Didáctica y Criterios de Evaluación
 
 El presente instrumento evalúa cuatro dimensiones clave del aprendizaje:
 
@@ -11,9 +11,9 @@ El presente instrumento evalúa cuatro dimensiones clave del aprendizaje:
 3. Manejo de Casos de Borde e Invariantes: Identificación de fallas potenciales en concurrencia, limites de tipos numéricos, horas de silencio, red y persistencia.
 4. Seguridad y Resiliencia: Aplicación de buenas prácticas en protección de llaves API, sanitización de datos y degradación elegante.
 
-Módulo 1: Fundamentos de Flutter, UI y Consumo de APIs HTTP
+### Módulo 1: Fundamentos de Flutter, UI y Consumo de APIs HTTP
 
-Pregunta 1
+#### Pregunta1
 
 ¿Cuál es la función principal del widget FutureBuilder en aplicaciones que consumen APIs externas como la de CoinGecko o TMDB?
 
@@ -22,7 +22,7 @@ Pregunta 1
 * C) Cachear automáticamente la respuesta JSON en el almacenamiento persistente del dispositivo.
 * D) Convertir cadenas JSON en mapas de Dart sin necesidad de jsonDecode.
 
-Pregunta 2
+#### Pregunta2
 
 En el desarrollo de la aplicación del clima usando la API de OpenWeatherMap, ¿por qué es indispensable el uso del widget CircularProgressIndicator dentro del árbol de widgets?
 
@@ -31,7 +31,7 @@ En el desarrollo de la aplicación del clima usando la API de OpenWeatherMap, ¿
 * C) Para medir la velocidad de descarga de la conexión a internet.
 * D) Para forzar el redibujado de toda la pantalla cada segundo.
 
-Pregunta 3
+#### Pregunta3
 
 Al construir una URL dinámica para servicios como Cataas (Cats as a Service) o Wikipedia a partir de un TextField, ¿qué función de Dart debe emplearse para evitar romper la sintaxis de la URI al incluir espacios o caracteres especiales?
 
@@ -40,7 +40,7 @@ Al construir una URL dinámica para servicios como Cataas (Cats as a Service) o 
 * C) jsonEncode().
 * D) utf8.encode().
 
-Pregunta 4
+#### Pregunta4
 
 ¿Qué código de respuesta HTTP indica que el cliente ha excedido la cuota permitida de peticiones a un servicio web (Rate Limit)?
 
@@ -49,7 +49,7 @@ Pregunta 4
 * C) HTTP 429 Too Many Requests.
 * D) HTTP 503 Service Unavailable.
 
-Pregunta 5
+#### Pregunta5
 
 En el paquete http de Dart, ¿qué sucede por defecto cuando una petición HTTP retorna un código de estado 404 o 500?
 
@@ -58,7 +58,7 @@ En el paquete http de Dart, ¿qué sucede por defecto cuando una petición HTTP 
 * C) Cierra la aplicación de manera abrupta por falla irrecuperable.
 * D) Reintenta la petición automáticamente hasta cinco veces.
 
-Pregunta 6
+#### Pregunta6
 
 ¿Cuál es la ventaja de transformar la respuesta en bytes UTF-8 mediante http.Response.bytes(utf8.encode(...)) durante las pruebas unitarias de servicios web?
 
@@ -67,7 +67,7 @@ Pregunta 6
 * C) Encriptar los datos para que no se puedan leer en los logs de la consola.
 * D) Simular una latencia de red de baja velocidad.
 
-Pregunta 7
+#### Pregunta7
 
 En el widget ListView.builder, ¿qué propiedad determina la cantidad exacta de elementos a renderizar de forma perezosa?
 
@@ -76,7 +76,7 @@ En el widget ListView.builder, ¿qué propiedad determina la cantidad exacta de 
 * C) shrinkWrap.
 * D) scrollDirection.
 
-Pregunta 8
+#### Pregunta8
 
 ¿Para qué se utiliza el método setState() en un StatefulWidget dentro de aplicaciones interactivas sencillas como el convertidor de criptomonedas?
 
@@ -85,7 +85,7 @@ Pregunta 8
 * C) Para guardar la información en memoria flash antes de cerrar la app.
 * D) Para reiniciar el ciclo de vida del widget desde initState().
 
-Pregunta 9
+#### Pregunta9
 
 Al trabajar con campos numéricos ingresados mediante TextField (como montos en USD para conversión a crypto), ¿cuál es la forma correcta de parsear el texto a número decimal controlando entradas inválidas?
 
@@ -94,7 +94,7 @@ Al trabajar con campos numéricos ingresados mediante TextField (como montos en 
 * C) double.tryParse(text) y verificar si el resultado es null.
 * D) text as double.
 
-Pregunta 10
+#### Pregunta10
 
 ¿Qué rol cumple el parámetro headers: {'Accept': 'application/json'} en una petición HTTP cliente?
 
@@ -105,7 +105,7 @@ Pregunta 10
 
 Módulo 2: Metodología TDD en Dart Puro (Rojo, Verde, Refactor)
 
-Pregunta 11
+#### Pregunta11
 
 ¿Cuál es la secuencia estricta de pasos que define el ciclo del Desarrollo Guiado por Pruebas (TDD)?
 
@@ -114,7 +114,7 @@ Pregunta 11
 * C) 1. Diseñar UI, 2. Escribir pruebas de integración, 3. Compilar APK.
 * D) 1. Refactor, 2. Verde, 3. Rojo.
 
-Pregunta 12
+#### Pregunta12
 
 ¿Por qué se exige que la carpeta de lógica de dominio (por ejemplo lib/dominio/) no contenga importaciones del paquete flutter ni de plugins de infraestructura?
 
@@ -123,7 +123,7 @@ Pregunta 12
 * C) Porque el lenguaje Dart prohíbe importar Flutter fuera de la carpeta lib/presentacion/.
 * D) Para evitar requerir permisos de internet en el dispositivo.
 
-Pregunta 13
+#### Pregunta13
 
 Durante la etapa Rojo en TDD, ¿cuál es el significado de que una prueba falle correctamente?
 
@@ -132,7 +132,7 @@ Durante la etapa Rojo en TDD, ¿cuál es el significado de que una prueba falle 
 * C) Que el compilador de Dart ha detectado un bucle infinito.
 * D) Que la computadora no tiene conexión a la red local.
 
-Pregunta 14
+#### Pregunta14
 
 En el principio de la etapa Verde en TDD, ¿qué cantidad de código se debe escribir?
 
@@ -141,7 +141,7 @@ En el principio de la etapa Verde en TDD, ¿qué cantidad de código se debe esc
 * C) Únicamente comentarios explicativos del algoritmo.
 * D) El diseño visual completo del widget en Flutter.
 
-Pregunta 15
+#### Pregunta15
 
 ¿Qué actividad está permitida durante la etapa de Refactor en TDD?
 
@@ -150,7 +150,7 @@ Pregunta 15
 * C) Eliminar las pruebas que causen advertencias de linter.
 * D) Cambiar los requisitos de negocio acordados con el cliente.
 
-Pregunta 16
+#### Pregunta16
 
 Al probar algoritmos numéricos o matemáticos delicados en Dart (como la similitud de cadenas en Levenshtein o el desglose de IVA), ¿qué buena práctica se recomienda para definir los valores esperados?
 
@@ -159,7 +159,7 @@ Al probar algoritmos numéricos o matemáticos delicados en Dart (como la simili
 * C) Dejar la aserción en blanco hasta ver qué imprime el programa.
 * D) Redondear todos los resultados al entero más cercano.
 
-Pregunta 17
+#### Pregunta17
 
 ¿Qué función de la biblioteca flutter_test se utiliza para comparar el valor obtenido contra el valor esperado en una prueba unitaria?
 
@@ -168,7 +168,7 @@ Pregunta 17
 * C) verify().
 * D) check().
 
-Pregunta 18
+#### Pregunta18
 
 En el contexto de TDD, ¿qué es una prueba de regresión?
 
@@ -177,7 +177,7 @@ En el contexto de TDD, ¿qué es una prueba de regresión?
 * C) Una prueba que se ejecuta únicamente cuando el dispositivo pierde conexión a internet.
 * D) Una prueba diseñada para fallar intencionalmente en producción.
 
-Pregunta 19
+#### Pregunta19
 
 ¿Qué representa el comparador closeTo(valor, tolerancia) en las pruebas de Dart?
 
@@ -186,7 +186,7 @@ Pregunta 19
 * C) Comprueba si dos objetos residen en direcciones de memoria cercanas.
 * D) Determina si una fecha está próxima a la hora actual.
 
-Pregunta 20
+#### Pregunta20
 
 ¿Por qué se considera mala práctica modificar una prueba que estaba en verde solo para hacer que vuelva a pasar tras introducir un cambio que rompió el comportamiento?
 
@@ -197,7 +197,7 @@ Pregunta 20
 
 Módulo 3: Arquitectura Limpia, Inyección de Dependencias y Patrón Puerto/Adaptador
 
-Pregunta 21
+#### Pregunta21
 
 En el patrón de Arquitectura Limpia con Puertos y Adaptadores (Hexagonal), ¿qué representa una clase abstracta como PuertoNotificaciones o PuertoPush?
 
@@ -206,7 +206,7 @@ En el patrón de Arquitectura Limpia con Puertos y Adaptadores (Hexagonal), ¿qu
 * C) La vista o pantalla que interactúa directamente con el usuario final.
 * D) La base de datos SQLite en memoria.
 
-Pregunta 22
+#### Pregunta22
 
 ¿Qué es la Inyección de Dependencias y cuál es su beneficio principal en TDD?
 
@@ -215,7 +215,7 @@ Pregunta 22
 * C) Insertar código SQL directamente en los controladores de la vista.
 * D) Ejecutar múltiples aislamientos (isolates) en paralelo para procesar peticiones.
 
-Pregunta 23
+#### Pregunta23
 
 En la práctica de "Ajolotito Hambriento", ¿por qué se reemplaza la llamada directa a DateTime.now() por una abstracción Reloj?
 
@@ -224,7 +224,7 @@ En la práctica de "Ajolotito Hambriento", ¿por qué se reemplaza la llamada di
 * C) Para formatear automáticamente la fecha en español.
 * D) Para sincronizar la hora del dispositivo con un servidor NTP en la nube.
 
-Pregunta 24
+#### Pregunta24
 
 ¿Qué diferencia a una clase "Doble de Prueba" de tipo Falso (PuertoFalso / AlmacenMemoria) de una implementación real?
 
@@ -233,7 +233,7 @@ Pregunta 24
 * C) El Falso es generado automáticamente por el compilador de Flutter.
 * D) El Falso solo funciona cuando el dispositivo está en modo avión.
 
-Pregunta 25
+#### Pregunta25
 
 ¿Qué es el "Composition Root" (Raíz de Composición) en un proyecto de Flutter?
 
@@ -242,7 +242,7 @@ Pregunta 25
 * C) El método build() del widget raíz MaterialApp.
 * D) La tabla principal de la base de datos relacional.
 
-Pregunta 26
+#### Pregunta26
 
 En la arquitectura propuesta para "SuperApp Dolores", ¿por qué las mini-apps reciben únicamente un ContextoMiniApp en lugar de la instancia completa de Plataforma?
 
@@ -251,7 +251,7 @@ En la arquitectura propuesta para "SuperApp Dolores", ¿por qué las mini-apps r
 * C) Porque Dart impide pasar clases complejas a widgets secundarios.
 * D) Para acelerar el renderizado de gráficos 2D.
 
-Pregunta 27
+#### Pregunta27
 
 ¿Qué ventaja ofrece abstraer el cliente HTTP detrás de una interfaz o usar MockClient de http/testing.dart?
 
@@ -260,7 +260,7 @@ Pregunta 27
 * C) Evitar configurar los permisos de internet en el AndroidManifest.xml.
 * D) Convertir automáticamente respuestas HTML a widgets de Flutter.
 
-Pregunta 28
+#### Pregunta28
 
 ¿Qué principio de diseño se aplica al invertir una lista de datos para reutilizar un algoritmo de desplazamiento horizontal (como en Nieves 2048 o en Geodesia) en lugar de duplicar código?
 
@@ -269,7 +269,7 @@ Pregunta 28
 * C) Encapsulamiento Nulo.
 * D) Programación Orientada a Aspectos.
 
-Pregunta 29
+#### Pregunta29
 
 Si se actualiza la versión de un paquete de terceros (por ejemplo flutter_local_notifications), ¿en qué capa del proyecto debe realizarse la adaptación si se aplicó el patrón Puerto/Adaptador?
 
@@ -278,7 +278,7 @@ Si se actualiza la versión de un paquete de terceros (por ejemplo flutter_local
 * C) En el archivo de configuración pubspec.yaml excluyendo el código Dart.
 * D) En la base de datos SQLite.
 
-Pregunta 30
+#### Pregunta30
 
 ¿Qué caracteriza a un modelo de dominio "puro" en Dart?
 
@@ -289,7 +289,7 @@ Pregunta 30
 
 Módulo 4: Gestor de Estado ViewModel, Reactividad y Manejo de Estados de UI
 
-Pregunta 31
+#### Pregunta31
 
 ¿Cuál es la responsabilidad principal de un ViewModel (usando ChangeNotifier) en la arquitectura de la aplicación?
 
@@ -298,7 +298,7 @@ Pregunta 31
 * C) Dibujar los píxeles de los botones en la pantalla.
 * D) Almacenar las credenciales del usuario de forma encriptada en disco.
 
-Pregunta 32
+#### Pregunta32
 
 ¿Qué estados fundamentales se deben gestionar explícitamente en el ViewModel para representar el ciclo de vida de una pantalla orientada a datos (ej. Directorio Dolorense)?
 
@@ -307,7 +307,7 @@ Pregunta 32
 * C) activo, inactivo, suspendido.
 * D) online, offline.
 
-Pregunta 33
+#### Pregunta33
 
 ¿Qué widget de Flutter se utiliza para escuchar los cambios de un ChangeNotifier y redibujar únicamente la sub-rama de la interfaz afectada?
 
@@ -316,7 +316,7 @@ Pregunta 33
 * C) SingleChildScrollView.
 * D) Column.
 
-Pregunta 34
+#### Pregunta34
 
 Al implementar la interacción en vivo con el usuario (como un buscador de negocios o productos), ¿qué técnica previene que se lance una petición HTTP por cada tecla presionada?
 
@@ -325,7 +325,7 @@ Al implementar la interacción en vivo con el usuario (como un buscador de negoc
 * C) Forzar el apagado del teclado virtual.
 * D) Duplicar la memoria RAM asignada al widget.
 
-Pregunta 35
+#### #### Pregunta35
 
 ¿Qué sucede si un ViewModel olvida invocar notifyListeners() tras actualizar una variable interna observada por la interfaz?
 
@@ -334,7 +334,7 @@ Pregunta 35
 * C) La base de datos SQLite elimina el registro.
 * D) Se envía una notificación push al servidor.
 
-Pregunta 36
+#### Pregunta36
 
 ¿Por qué se recomienda instanciar el ViewModel en el initState() del StatefulWidget o mediante una fábrica inyectada?
 
@@ -343,7 +343,7 @@ Pregunta 36
 * C) Para asegurar que la app corra en modo de 60 fotogramas por segundo.
 * D) Para habilitar la rotación automática de pantalla.
 
-Pregunta 37
+#### #### Pregunta37
 
 En el manejo de formularios (como el cobro en Caja o registro de usuarios), ¿cuál es el papel del ViewModel ante un error de validación producido en el dominio?
 
@@ -352,7 +352,7 @@ En el manejo de formularios (como el cobro en Caja o registro de usuarios), ¿cu
 * C) Imprimir el stack trace completo en un diálogo emergente.
 * D) Ignorar el error y continuar el flujo.
 
-Pregunta 38
+#### #### Pregunta38
 
 En el patrón Carga<T> utilizado en el tablero de 5 APIs de "Dolores Hoy", ¿qué beneficio aporta tener un estado de carga independiente por cada servicio/tarjeta?
 
@@ -361,7 +361,7 @@ En el patrón Carga<T> utilizado en el tablero de 5 APIs de "Dolores Hoy", ¿qu�
 * C) Reducir el consumo de batería en un 80%.
 * D) Evitar requerir una clave de API.
 
-Pregunta 39
+#### #### Pregunta39
 
 ¿Qué método del ciclo de vida de un State en Flutter debe utilizarse para liberar los recursos de un ViewModel o TextEditingController (ej. mediante dispose())?
 
@@ -370,7 +370,7 @@ Pregunta 39
 * C) dispose().
 * D) didUpdateWidget().
 
-Pregunta 40
+#### Pregunta40
 
 ¿Cómo se verifica en una prueba unitaria de ViewModel (usando flutter_test) que se emitió la secuencia correcta de estados (ej. de cargando a listo)?
 
@@ -381,7 +381,7 @@ Pregunta 40
 
 Módulo 5: Persistencia Local con SQLite, Transacciones y Manejo Finito del Dinero
 
-Pregunta 41
+#### Pregunta41
 
 En aplicaciones financieras o de punto de venta (como "Punto de Venta Dolorense"), ¿por qué es una regla de oro evitar el uso de tipos de datos double para representar montos de dinero?
 
@@ -390,7 +390,7 @@ En aplicaciones financieras o de punto de venta (como "Punto de Venta Dolorense"
 * C) Porque la base de datos SQLite no soporta números reales.
 * D) Porque el lenguaje Dart no permite aplicar operaciones matemáticas a variables double.
 
-Pregunta 42
+#### Pregunta42
 
 ¿Cómo se debe representar internamente un precio de $1,234.56 en el modelo de dominio para garantizar cálculos exactos?
 
@@ -399,7 +399,7 @@ Pregunta 42
 * C) Como un arreglo de enteros [1234, 56].
 * D) Como un flotante de 32 bits.
 
-Pregunta 43
+#### Pregunta43
 
 En las pruebas unitarias de persistencia con sqflite, ¿qué configuración se utiliza para probar las consultas SQL en memoria sin crear archivos físicos en el sistema de archivos?
 
@@ -408,7 +408,7 @@ En las pruebas unitarias de persistencia con sqflite, ¿qué configuración se u
 * C) path = "null".
 * D) Un archivo JSON temporal.
 
-Pregunta 44
+#### Pregunta44
 
 Al ejecutar el cobro de un carrito en el repositorio de ventas, ¿por qué es crítico envolver las operaciones de actualización de inventario e inserción de la venta en una transacción SQL atómica (db.transaction)?
 
@@ -417,7 +417,7 @@ Al ejecutar el cobro de un carrito en el repositorio de ventas, ¿por qué es cr
 * C) Para evitar que la pantalla parpadee al presionar el botón de cobro.
 * D) Para cifrar los precios de los productos.
 
-Pregunta 45
+#### Pregunta45
 
 ¿Cuál es la responsabilidad del método aMapa() y del constructor desdeMapa() en una clase de modelo de dominio relacional (como Producto)?
 
@@ -426,7 +426,7 @@ Pregunta 45
 * C) Cargar las imágenes del producto desde una red CDN.
 * D) Generar la clave primaria de forma aleatoria.
 
-Pregunta 46
+#### Pregunta46
 
 Si al intentar insertar un producto con un código de barras duplicado SQLite lanza una excepción técnica (DatabaseException por restricción UNIQUE), ¿qué debe hacer el repositorio?
 
@@ -435,7 +435,7 @@ Si al intentar insertar un producto con un código de barras duplicado SQLite la
 * C) Ignorar la inserción y continuar en silencio.
 * D) Cerrar la base de datos y volverla a abrir.
 
-Pregunta 47
+#### Pregunta47
 
 En el desglose de IVA (16%) a partir de un total que ya incluye impuestos (ej. $116.00 total), ¿cuál es la fórmula matemática exacta para obtener el IVA en centavos?
 
@@ -444,7 +444,7 @@ En el desglose de IVA (16%) a partir de un total que ya incluye impuestos (ej. $
 * C) totalCentavos - (totalCentavos * 100 ~/ 116).
 * D) totalCentavos / 1.16.
 
-Pregunta 48
+#### Pregunta48
 
 ¿Por qué se debe revalidar la existencia de inventario suficiente dentro de la transacción SQL de cobro, aun cuando el carrito de compras ya haya validado las existencias previamente en memoria?
 
@@ -453,7 +453,7 @@ Pregunta 48
 * C) Porque SQLite requiere al menos tres consultas por transacción.
 * D) Para calcular las comisiones de la tarjeta de crédito.
 
-Pregunta 49
+#### Pregunta49
 
 En una consulta SQL para obtener el corte de caja del día (corteDelDia), ¿qué función de agregación SQL permite retornar 0 en lugar de NULL si no se realizaron ventas en el periodo?
 
@@ -462,7 +462,7 @@ En una consulta SQL para obtener el corte de caja del día (corteDelDia), ¿qué
 * C) MAX(total_centavos).
 * D) AVG(total_centavos).
 
-Pregunta 50
+#### Pregunta50
 
 ¿Qué beneficio aporta el patrón Repositorio al aislar la base de datos SQLite detrás de una interfaz?
 
@@ -473,7 +473,7 @@ Pregunta 50
 
 Módulo 6: Notificaciones Locales vs. Push (FCM), Canales y Manejo de Antesegundo Plano
 
-Pregunta 51
+#### Pregunta51
 
 ¿Cuál es la diferencia fundamental entre una notificación local (flutter_local_notifications) y una notificación Push (firebase_messaging)?
 
@@ -482,7 +482,7 @@ Pregunta 51
 * C) Las notificaciones push no funcionan cuando la aplicación está cerrada.
 * D) Las notificaciones locales solo pueden contener texto sin formato.
 
-Pregunta 52
+#### Pregunta52
 
 En el desarrollo de "Ajolotito Hambriento", ¿qué regla de oro gobierna la frecuencia y momento de envío de notificaciones locales al usuario?
 
@@ -491,7 +491,7 @@ En el desarrollo de "Ajolotito Hambriento", ¿qué regla de oro gobierna la frec
 * C) Solicitar el permiso del sistema operativo inmediatamente al abrir la app por primera vez.
 * D) Reintentar la notificación indefinidamente si el usuario la ignora.
 
-Pregunta 53
+#### Pregunta53
 
 ¿Qué cambio crítico introdujo Android 13 (API 33) respecto a las notificaciones que afecta a las aplicaciones de Flutter?
 
@@ -500,7 +500,7 @@ Pregunta 53
 * C) Eliminó los canales de notificación.
 * D) Obligó al uso de Firebase en todas las aplicaciones.
 
-Pregunta 54
+#### Pregunta54
 
 En el manual de "Lotería Push", ¿cuál es la premisa arquitectónica fundamental sobre la relación entre el mensaje Push y el servidor backend?
 
@@ -509,7 +509,7 @@ En el manual de "Lotería Push", ¿cuál es la premisa arquitectónica fundament
 * C) Si un push se pierde, la aplicación debe reiniciarse desde cero.
 * D) El servidor sólo envía notificaciones cuando la app está abierta en primer plano.
 
-Pregunta 55
+#### Pregunta55
 
 ¿Por qué el API de Firebase Cloud Messaging (FCM) exige que todos los valores dentro del mapa data de una notificación push sean de tipo String?
 
@@ -518,7 +518,7 @@ Pregunta 55
 * C) Porque Dart no soporta mapas con valores heterogéneos.
 * D) Para acelerar la velocidad de encriptación SSL.
 
-Pregunta 56
+#### Pregunta56
 
 Al recibir notificaciones Push en FCM, ¿cuáles son los tres estados posibles de la aplicación móvil y qué manejador responde en cada uno?
 
@@ -527,7 +527,7 @@ Al recibir notificaciones Push en FCM, ¿cuáles son los tres estados posibles d
 * C) inicial, cargando, listo.
 * D) debug, profile, release.
 
-Pregunta 57
+#### Pregunta57
 
 ¿Qué requisito estricto debe cumplir la función anotada con @pragma('vm:entry-point') que procesa notificaciones FCM en segundo plano (onBackgroundMessage)?
 
@@ -536,7 +536,7 @@ Pregunta 57
 * C) Debe retornar un objeto de tipo BuildContext.
 * D) Debe ejecutarse dentro del método main() antes de runApp().
 
-Pregunta 58
+#### Pregunta58
 
 ¿Qué es el payload de una notificación y cuál es su utilidad al ser tocada por el usuario?
 
@@ -545,7 +545,7 @@ Pregunta 58
 * C) Es el certificado de seguridad SSL del servidor.
 * D) Es el código identificador de la red Wi-Fi.
 
-Pregunta 59
+#### Pregunta59
 
 ¿Para qué sirven los Canales de Notificación (NotificationChannel) en Android?
 
@@ -554,7 +554,7 @@ Pregunta 59
 * C) Para transmitir video en tiempo real.
 * D) Para conectar la app con redes sociales.
 
-Pregunta 60
+#### Pregunta60
 
 Al migrar de Tokens de FCM hacia Identificadores de Instalación de Firebase (FID / FirebaseInstallations), ¿por qué la arquitectura limpia minimiza el impacto en el código?
 
@@ -565,7 +565,7 @@ Al migrar de Tokens de FCM hacia Identificadores de Instalación de Firebase (FI
 
 Módulo 7: Buenas Prácticas de Seguridad, Manejo de Secretos y Defensa en Capas
 
-Pregunta 61
+#### Pregunta61
 
 ¿Por qué constituye una falla grave de seguridad guardar claves privadas de APIs (como la API Key de la NASA, OpenAI o Stripe) directamente en el código fuente de una aplicación móvil Flutter?
 
@@ -574,7 +574,7 @@ Pregunta 61
 * C) Porque el servidor de Google Play rechaza aplicaciones con texto plano.
 * D) Porque el lenguaje Dart elimina las cadenas constantes al compilar.
 
-Pregunta 62
+#### Pregunta62
 
 ¿Cuál es la forma recomendada en Flutter de ingresar llaves de API al compilar sin escribirlas en el código rastreable por Git?
 
@@ -583,7 +583,7 @@ Pregunta 62
 * C) Guardarlas en la carpeta assets/images/.
 * D) Solicitar al usuario que teclee la llave cada vez que abre la app.
 
-Pregunta 63
+#### Pregunta63
 
 En una arquitectura cliente-servidor profesional, ¿cuál es el nivel más alto de seguridad (Nivel 4) para proteger llaves de APIs costosas o sensibles?
 
@@ -592,7 +592,7 @@ En una arquitectura cliente-servidor profesional, ¿cuál es el nivel más alto 
 * C) Cambiar la llave de API todos los días a medianoche.
 * D) Guardar la llave en las preferencias compartidas (SharedPreferences).
 
-Pregunta 64
+#### Pregunta64
 
 Al escribir logs de depuración o rastreo en producción, ¿qué responsabilidad tiene la función ClienteSeguro.redactar(Uri uri)?
 
@@ -601,7 +601,7 @@ Al escribir logs de depuración o rastreo en producción, ¿qué responsabilidad
 * C) Eliminar los acentos de los parámetros.
 * D) Comprimir la dirección URL mediante algoritmo GZIP.
 
-Pregunta 65
+#### Pregunta65
 
 ¿Qué regla de seguridad en el manejo de excepciones establece la función mensajeSeguro(Object error) en las aplicaciones evaluadas?
 
@@ -610,7 +610,7 @@ Pregunta 65
 * C) Enviar un correo al desarrollador cada vez que ocurre un error.
 * D) Silenciar todos los errores y mostrar una pantalla en blanco.
 
-Pregunta 66
+#### Pregunta66
 
 Al recibir URLs de recursos desde APIs de terceros (como imágenes de Wikipedia o la NASA), ¿qué validación de seguridad realiza la función soloHttps(url)?
 
@@ -619,7 +619,7 @@ Al recibir URLs de recursos desde APIs de terceros (como imágenes de Wikipedia 
 * C) Descarga la imagen en segundo plano antes de mostrarla.
 * D) Cambia la extensión de la imagen a PNG.
 
-Pregunta 67
+#### Pregunta67
 
 En el cliente HTTP seguro (ClienteSeguro), ¿por qué se impone un límite explícito de tamaño en bytes (maxBytes) a las respuestas recibidas?
 
@@ -628,7 +628,7 @@ En el cliente HTTP seguro (ClienteSeguro), ¿por qué se impone un límite expl�
 * C) Porque el SDK de Flutter no puede procesar archivos de más de 1 KB.
 * D) Para acelerar la velocidad de animación de la interfaz.
 
-Pregunta 68
+#### Pregunta68
 
 Al almacenar información altamente sensible en el dispositivo (como tokens de autenticación o tarjetas de crédito tokenizadas), ¿qué paquete debe utilizarse en lugar de SharedPreferences?
 
@@ -637,7 +637,7 @@ Al almacenar información altamente sensible en el dispositivo (como tokens de a
 * C) sqflite sin contraseña.
 * D) dart:io.
 
-Pregunta 69
+#### Pregunta69
 
 En el algoritmo de validación de tarjetas de crédito (Algoritmo de Luhn), ¿cuál es su propósito primario antes de llamar a la pasarela de pagos?
 
@@ -646,7 +646,7 @@ En el algoritmo de validación de tarjetas de crédito (Algoritmo de Luhn), ¿cu
 * C) Obtener el nip secreto del cuentahabiente.
 * D) Transferir el monto directamente a la cuenta del vendedor.
 
-Pregunta 70
+#### Pregunta70
 
 ¿Qué previene la implementación de una Clave de Idempotencia (Idempotency Key) en las peticiones a una pasarela de pagos durante una falla de red?
 
@@ -657,7 +657,7 @@ Pregunta 70
 
 Módulo 8: Geodesia, Realidad Aumentada (AR), Sensores y CustomPainter
 
-Pregunta 71
+#### Pregunta71
 
 En las aplicaciones de geodesia y realidad aumentada ("Rally" y "Dolores AR"), ¿qué calcula la fórmula de Haversine entre dos coordenadas geográficas (latitud, longitud)?
 
@@ -666,7 +666,7 @@ En las aplicaciones de geodesia y realidad aumentada ("Rally" y "Dolores AR"), �
 * C) La velocidad promedio del usuario al caminar.
 * D) El nivel de batería consumido por el sensor GPS.
 
-Pregunta 72
+#### Pregunta72
 
 ¿Qué representa el azimut o rumbo en grados (rumboGrados) entre una posición de origen y una de destino?
 
@@ -675,7 +675,7 @@ Pregunta 72
 * C) El porcentaje de precisión del sensor GPS.
 * D) La hora del día calculada por el sol.
 
-Pregunta 73
+#### Pregunta73
 
 En el problema directo de la geodesia (función destino(origen, rumbo, distancia)), ¿qué resultado se obtiene?
 
@@ -684,7 +684,7 @@ En el problema directo de la geodesia (función destino(origen, rumbo, distancia
 * C) El nombre de la calle del punto de llegada.
 * D) La velocidad angular del giroscopio.
 
-Pregunta 74
+#### Pregunta74
 
 Al proyectar la posición de un objeto en la pantalla de la cámara mediante el campo de visión horizontal (FOV), ¿cómo se calcula la posición horizontal relativa x (de 0.0 a 1.0)?
 
@@ -693,7 +693,7 @@ Al proyectar la posición de un objeto en la pantalla de la cámara mediante el 
 * C) Multiplicando la distancia en metros por el número de píxeles.
 * D) Asignando un valor aleatorio entre 0 y 1.
 
-Pregunta 75
+#### Pregunta75
 
 ¿Por qué se requiere un algoritmo especial (diferenciaAngular) para calcular la distancia angular entre dos rumbos en lugar de una resta simple?
 
@@ -702,7 +702,7 @@ Pregunta 75
 * C) Porque los sensores de la brújula solo entregan valores pares.
 * D) Porque la curvatura de la Tierra deforma la resta.
 
-Pregunta 76
+#### Pregunta76
 
 Al promediar lecturas continuas de la brújula magnética para evitar vibraciones en las etiquetas de AR, ¿por qué falla un promedio aritmético estándar cerca del Norte?
 
@@ -711,7 +711,7 @@ Al promediar lecturas continuas de la brújula magnética para evitar vibracione
 * C) Porque el magnetómetro se apaga al detectar el Norte.
 * D) Porque el paquete flutter_compass se bloquea.
 
-Pregunta 77
+#### Pregunta77
 
 En la función de suavizado angular (suavizarAngulo), ¿cómo se resuelve la interpolación sin sufrir saltos en la discontinuidad de 0°/360°?
 
@@ -720,7 +720,7 @@ En la función de suavizado angular (suavizarAngulo), ¿cómo se resuelve la int
 * C) Multiplicando el valor por \pi.
 * D) Reiniciando el sensor en cada muestra.
 
-Pregunta 78
+#### Pregunta78
 
 ¿Qué papel cumple la clase CustomPainter en la creación del widget de radar polar?
 
@@ -729,7 +729,7 @@ Pregunta 78
 * C) Renderizar modelos 3D complejos con iluminación en tiempo real.
 * D) Detectar toques táctiles en la pantalla.
 
-Pregunta 79
+#### Pregunta79
 
 En la integración de modelos 3D en Realidad Aumentada con model_viewer_plus, ¿cuáles son los dos formatos de archivo 3D estándar utilizados para Android (Scene Viewer) e iOS (Quick Look) respectivamente?
 
@@ -738,7 +738,7 @@ En la integración de modelos 3D en Realidad Aumentada con model_viewer_plus, ¿
 * C) .stl y .blend.
 * D) .png y .svg.
 
-Pregunta 80
+#### Pregunta80
 
 En el desarrollo de "Dolores AR" y "Rally AR", ¿por qué se incluye un "Modo Demo" respaldado por PosicionSimulada y BrujulaSimulada?
 
@@ -749,7 +749,7 @@ En el desarrollo de "Dolores AR" y "Rally AR", ¿por qué se incluye un "Modo De
 
 Módulo 9: Algoritmos Complejos (2048, Levenshtein, Repetición Espaciada SM-2, EMA)
 
-Pregunta 81
+#### Pregunta81
 
 En la lógica del juego Nieves 2048, al compactar y fusionar una fila con el contenido [2, 2, 2, null], ¿cuál es el resultado correcto tras deslizar hacia la izquierda?
 
@@ -758,7 +758,7 @@ En la lógica del juego Nieves 2048, al compactar y fusionar una fila con el con
 * C) [4, 4, null, null].
 * D) [2, 4, null, null].
 
-Pregunta 82
+#### Pregunta82
 
 ¿Por qué en Nieves 2048 la fila [2, 2, 2, null] NO debe convertirse en [8, null, null, null] en un solo movimiento?
 
@@ -767,7 +767,7 @@ Pregunta 82
 * C) Porque el array contiene un valor null.
 * D) Para evitar ganar el juego demasiado rápido.
 
-Pregunta 83
+#### Pregunta83
 
 En el algoritmo de Nieves 2048, ¿cómo se implementa el movimiento en las cuatro direcciones (izquierda, derecha, arriba, abajo) sin duplicar el código de compactación y fusión?
 
@@ -776,7 +776,7 @@ En el algoritmo de Nieves 2048, ¿cómo se implementa el movimiento en las cuatr
 * C) Usando expresiones regulares sobre la matriz.
 * D) Reiniciando el estado del tablero en cada giro.
 
-Pregunta 84
+#### Pregunta84
 
 ¿Cómo determina el motor del juego Nieves 2048 si debe o no agregar una nueva ficha aleatoria tras un deslizamiento del usuario?
 
@@ -785,7 +785,7 @@ Pregunta 84
 * C) Agrega una ficha solo si el usuario obtuvo más de 100 puntos.
 * D) Agrega una ficha únicamente cuando el temporizador llega a cero.
 
-Pregunta 85
+#### Pregunta85
 
 En la aplicación "Habla Fluido", ¿qué mide la distancia de Levenshtein entre la frase dicha por el alumno y la frase modelo?
 
@@ -794,7 +794,7 @@ En la aplicación "Habla Fluido", ¿qué mide la distancia de Levenshtein entre 
 * C) La velocidad de habla en palabras por minuto.
 * D) La cantidad de reglas gramaticales aplicadas.
 
-Pregunta 86
+#### Pregunta86
 
 En la comparación de cadenas de pronunciación, ¿qué transformación realiza la función normalizar(texto) antes de calcular la similitud?
 
@@ -803,7 +803,7 @@ En la comparación de cadenas de pronunciación, ¿qué transformación realiza 
 * C) Encripta la cadena con MD5.
 * D) Separa las palabras por sílabas fonéticas.
 
-Pregunta 87
+#### Pregunta87
 
 En el algoritmo de Repetición Espaciada SM-2 (SuperMemo 2) utilizado para el aprendizaje de idiomas, ¿qué ocurre con el intervalo de revisión de una tarjeta cuando el estudiante califica su recuerdo como un fallo (calidad < 3)?
 
@@ -812,7 +812,7 @@ En el algoritmo de Repetición Espaciada SM-2 (SuperMemo 2) utilizado para el ap
 * C) La tarjeta se elimina del mazo de estudio.
 * D) El factor de facilidad se fija en 5.0.
 
-Pregunta 88
+#### Pregunta88
 
 En el algoritmo SM-2, ¿cuál es el valor mínimo absoluto al que puede bajar el Factor de Facilidad (Easiness Factor) de una tarjeta difícil para evitar programaciones infinitas?
 
@@ -821,7 +821,7 @@ En el algoritmo SM-2, ¿cuál es el valor mínimo absoluto al que puede bajar el
 * C) 2.5.
 * D) 1.0.
 
-Pregunta 89
+#### Pregunta89
 
 Para calcular la métrica de dominio continuo de un alumno en una habilidad sin que un solo mal intento destruya su histórico, ¿por qué se prefiere un Promedio Móvil Exponencial (EMA) sobre un promedio aritmético simple?
 
@@ -830,7 +830,7 @@ Para calcular la métrica de dominio continuo de un alumno en una habilidad sin 
 * C) Porque el EMA funciona únicamente con números enteros.
 * D) Para evitar almacenar datos en disco.
 
-Pregunta 90
+#### Pregunta90
 
 En la lógica de la "Tanda Doloreña", ¿qué condición debe cumplirse obligatoriamente para poder ejecutar la función cerrarRondaYAvanzar()?
 
@@ -841,7 +841,7 @@ En la lógica de la "Tanda Doloreña", ¿qué condición debe cumplirse obligato
 
 Módulo 10: Arquitectura de SuperApps, Bus de Eventos, Permisos y Analítica de Retención
 
-Pregunta 91
+#### Pregunta91
 
 ¿Cuál es la característica arquitectónica principal que define a una SuperApp (como "Super Dolores") frente a un conjunto de aplicaciones independientes?
 
@@ -850,7 +850,7 @@ Pregunta 91
 * C) Que requiere permisos de superusuario (root) para ejecutarse.
 * D) Que no requiere conexión a internet en ninguna de sus funciones.
 
-Pregunta 92
+#### Pregunta92
 
 En la arquitectura de la SuperApp, ¿cuál es la función del Bus de Eventos (BusEventos)?
 
@@ -859,7 +859,7 @@ En la arquitectura de la SuperApp, ¿cuál es la función del Bus de Eventos (Bu
 * C) Guardar los archivos de imágenes en la memoria caché.
 * D) Encriptar el código fuente de la aplicación en tiempo de ejecución.
 
-Pregunta 93
+#### Pregunta93
 
 Si durante la publicación de un evento en el BusEventos uno de los suscriptores lanza una excepción no controlada, ¿cómo debe actuar el bus para mantener el aislamiento de fallos?
 
@@ -868,7 +868,7 @@ Si durante la publicación de un evento en el BusEventos uno de los suscriptores
 * C) Eliminar a todos los suscriptores del bus de eventos.
 * D) Revertir las transacciones SQL de la base de datos local.
 
-Pregunta 94
+#### Pregunta94
 
 ¿Qué es el patrón de "Kill Switch" (Feature Flag) aplicado al registro de mini-apps en la SuperApp?
 
@@ -877,7 +877,7 @@ Pregunta 94
 * C) Un filtro que bloquea mensajes con palabras altisonantes.
 * D) Una prueba unitaria que verifica si el dispositivo tiene batería suficiente.
 
-Pregunta 95
+#### Pregunta95
 
 En el Motor de Lealtad de "Super Dolores", ¿qué mecanismo previene que el usuario gane puntos de lealtad duplicados al recibir el mismo evento de compra dos veces por un reintento de red?
 
@@ -886,7 +886,7 @@ En el Motor de Lealtad de "Super Dolores", ¿qué mecanismo previene que el usua
 * C) Reiniciar el nivel de lealtad del usuario a Bronce.
 * D) Solicitar la clave nip del usuario en cada compra.
 
-Pregunta 96
+#### Pregunta96
 
 En la regla de bonificación por variedad de servicios de la SuperApp, ¿qué debe ocurrir si un usuario utiliza 3 servicios distintos (ej. chat, comercio y transporte) dentro de la misma semana?
 
@@ -895,7 +895,7 @@ En la regla de bonificación por variedad de servicios de la SuperApp, ¿qué de
 * C) Se le cobran comisiones dobles por transacción.
 * D) Se le bloquea la cuenta por actividad sospechosa.
 
-Pregunta 97
+#### Pregunta97
 
 En el diseño de notificaciones promocionales en la SuperApp, ¿qué regla aplica la clase Notificador para proteger la experiencia del usuario y evitar spam?
 
@@ -904,7 +904,7 @@ En el diseño de notificaciones promocionales en la SuperApp, ¿qué regla aplic
 * C) Cobrar 10 puntos de lealtad por cada notificación enviada.
 * D) Convertir las notificaciones en llamadas telefónicas automáticas.
 
-Pregunta 98
+#### Pregunta98
 
 ¿Qué sugiere el algoritmo de "Siguiente Mejor Acción" (sugerirServicio) a un usuario en su pantalla de inicio?
 
@@ -913,7 +913,7 @@ Pregunta 98
 * C) Un enlace para desinstalar la aplicación.
 * D) Una lista de contactos aleatorios de su libreta.
 
-Pregunta 99
+#### Pregunta99
 
 En el análisis de métricas de retención de usuarios (DAU, WAU, MAU), ¿qué mide la métrica de Usuarios Activos Diarios (DAU)?
 
@@ -922,7 +922,7 @@ En el análisis de métricas de retención de usuarios (DAU, WAU, MAU), ¿qué m
 * C) El porcentaje de usuarios que eliminaron la aplicación en las primeras 24 horas.
 * D) El tiempo total que la pantalla permaneció encendida.
 
-Pregunta 100
+#### Pregunta100
 
 Al interpretar los datos analíticos de retención que muestran que los usuarios que usan 4 servicios se conservan mejor que los que usan 1, ¿por qué es incorrecto afirmar categóricamente que "forzar el uso de 4 servicios CAUSA mayor retención"?
 
